@@ -1,6 +1,7 @@
 import './App.css'
 import AppLayout from './components/layout/AppLayout'
 import Topbar from './components/layout/Topbar'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
       <AppLayout>
         <Topbar />
+        <Dashboard />
       </AppLayout>
 
     </>
