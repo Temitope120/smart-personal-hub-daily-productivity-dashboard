@@ -13,7 +13,7 @@ const AppLayout = ({children}: ChildrenProps) => {
             </aside>
 
 
-            <main className=' ml-[200px] p-4 overflow-y-auto bg-[#F7F7F7] h-screen rounded-2xl md:rounded-3xl'>
+            <main className='w-full ml-[240px] p-4 overflow-y-auto bg-[#F7F7F7] h-screen rounded-2xl md:rounded-3xl'>
               {children}
             </main>
 
