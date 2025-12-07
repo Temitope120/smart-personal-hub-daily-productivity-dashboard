@@ -5,9 +5,9 @@ const Dashboard = () => {
     return (
         <>
             <div className="py-5 bg-[#F7F7F7] rounded-3xl mt-4 p-3 md:px-4 md:py-6 xl:p-6">
-                <div className="lg:flex justify-between gap-3 items-center">
-                    <div>
-                        <h2 className='md:text-5xl font-medium text-2xl'>
+                <div className="sm:flex justify-between gap-3 items-center">
+                    <div className='pb-3 pb-0'>
+                        <h2 className='lg:text-5xl font-sembold md:font-medium text-4xl'>
                             Dashboard
                         </h2>
                         <p className='text-sm md:text-base text-[#99999b]'> Plan, Prioritize your tasks with ease</p>
