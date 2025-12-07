@@ -5,3 +5,8 @@
   /* text-align: center; */
   /* min-height: 100vh; */
 }
+@media (max-width:430px){
+  #root{
+    padding:.5rem ;
+  }
+}
