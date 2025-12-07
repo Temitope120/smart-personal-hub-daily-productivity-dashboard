@@ -4,7 +4,7 @@ import DashboardGrid from '../components/layout/DashboardGrid'
 const Dashboard = () => {
     return (
         <>
-            <div className="py-5 bg-[#F7F7F7] rounded-3xl mt-4 p-3 md:px-4 md:py-6 xl:p-6 min-h-screen">
+            <div className="py-5 bg-[#F7F7F7] rounded-3xl mt-4 p-3 md:px-4 md:py-6 xl:p-6">
                 <div className="lg:flex justify-between gap-3 items-center">
                     <div>
                         <h2 className='md:text-5xl font-medium text-2xl'>
