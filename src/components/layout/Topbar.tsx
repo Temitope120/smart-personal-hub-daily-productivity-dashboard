@@ -7,7 +7,7 @@ import { IconContext } from "react-icons"
 
 const Topbar = () => {
   return (
-    <div className="bg-[#f7f7f7] flex justify-between items-center p-6 rounded-3xl">
+    <div className="bg-[#f7f7f7] flex justify-between gap-6 lg:ap-0 items-center p-4 lg:p-6 rounded-3xl">
 
       <form className=" w-[80%] max-w-md">
         <div className='bg-white flex justify-between items-center p-5 rounded-4xl'>
@@ -23,13 +23,13 @@ const Topbar = () => {
       </form>
 
       <div className="flex justify-between gap-3 items-center p-3">
-        <div className="bg-white rounded-full p-3">
+        <div className="bg-white rounded-full p-3 hidden xl:block">
           <IconContext.Provider value={{ size: '30px' }}>
             <CiMail />
           </IconContext.Provider>
         </div>
 
-        <div className="bg-white rounded-full p-3">
+        <div className="bg-white rounded-full p-3 hidden xl:block">
           <IconContext.Provider value={{ size: '30px' }}>
             <IoMdNotificationsOutline />
           </IconContext.Provider>
@@ -43,7 +43,7 @@ const Topbar = () => {
             </IconContext.Provider>
           </div>
 
-          <div className="text-base md:text-lg font-medium leading-none">
+          <div className="hidden xl:block text-base md:text-lg font-medium leading-none">
             <p >
               Mick Lawson
             </p>

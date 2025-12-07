@@ -1,4 +1,3 @@
-import React from 'react'
 import KpiCard from '../dashboard/kpi/KpiCard'
 import Analytics from '../dashboard/analytics/Analytics'
 import Reminder from '../dashboard/reminder/Reminder'
