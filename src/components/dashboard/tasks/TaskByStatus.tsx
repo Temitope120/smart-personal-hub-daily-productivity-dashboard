@@ -8,9 +8,9 @@ import { FcOvertime } from "react-icons/fc";
 const TaskByStatus = () => {
   return (
     <div className=' divide-y-2 divide-dashed divide-[#1B6747]-500/50'>
-      <div className='flex justify-between items-center  pb-3'>
-        <p className="font-medium text-lg md:text-2xl">Task By Status</p>
-        <button className=' flex items-center gap-3 border-2 border-[#1B6747] bg-white rounded-4xl text-[#1B6747] py-2 px-4 text-sm lg:text-base xl:text-xl cursor-pointer font-semibold!'>
+      <div className='block sm:flex justify-between items-center  pb-3'>
+        <p className="font-medium text-2xl mb-4 sm:mb-0 md:text-3xl">Task By Status</p>
+        <button className='flex items-center gap-3 border-2 border-[#1B6747] bg-white rounded-4xl text-[#1B6747] py-2 px-4 text-sm lg:text-base xl:text-xl cursor-pointer font-semibold!'>
           <FcPlus />
           Add New Task
         </button>
