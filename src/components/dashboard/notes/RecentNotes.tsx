@@ -2,10 +2,10 @@ import React from 'react'
 
 const RecentNotes = () => {
   return (
-    <div className='text-3xl'>
-      Recent Notes
+    <div>
+      <p className='font-medium text-xl md:text-3xl'>Recent Notes </p>
     </div>
-  )
+  ) 
 }
 
 export default RecentNotes

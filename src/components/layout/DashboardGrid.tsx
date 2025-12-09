@@ -47,7 +47,7 @@ const dashboardGrid = () => {
 
         {/* end carousel */}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-4 gap-3">
           <div className='sm:col-span-2 rounded-3xl py-4 px-6 bg-white w-full shadow-md'>
             <Analytics />
           </div>
