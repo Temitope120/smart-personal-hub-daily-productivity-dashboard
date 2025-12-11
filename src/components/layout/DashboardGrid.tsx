@@ -3,7 +3,7 @@ import Analytics from '../dashboard/analytics/Analytics'
 import Reminder from '../dashboard/reminder/Reminder'
 import RecentNotes from '../dashboard/notes/RecentNotes'
 import TaskByStatus from '../dashboard/tasks/TaskByStatus'
-import HabitCompletionProgress from '../dashboard/habit/HabitCompletionProgress'
+import TaskCompletionProgress from '../dashboard/habit/TaskCompletionProgress'
 import { Carousel } from '@mantine/carousel';
 
 const dashboardGrid = () => {
@@ -69,7 +69,7 @@ const dashboardGrid = () => {
 
           <div className='rounded-3xl py-4 px-6 bg-white w-full shadow-md'>
 
-            <HabitCompletionProgress />
+            <TaskCompletionProgress />
           </div>
         </div>
       </div>
