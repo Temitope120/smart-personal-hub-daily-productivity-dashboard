@@ -1,9 +1,10 @@
 import { IconContext } from "react-icons";
-import { FcBriefcase } from "react-icons/fc";
 import { FcReading } from "react-icons/fc";
 import { FcVideoCall } from "react-icons/fc";
 import { FcPlus } from "react-icons/fc"
 import { FcOvertime } from "react-icons/fc";
+import { FcBiotech } from "react-icons/fc";
+import { FcFlowChart } from "react-icons/fc";
 
 const TaskByStatus = () => {
   return (
@@ -19,12 +20,12 @@ const TaskByStatus = () => {
       <div className='flex items-center justify-between gap-2 py-4 '>
         <div className='flex items-center justify-between gap-2 '>
           <IconContext.Provider value={{ size: "20px" }}>
-            <FcBriefcase />
+            <FcFlowChart />
           </IconContext.Provider>
-          <p>Grocery Shopping</p>
+          <p className="text-xs sm:text-sm md:text-base">Integrate User Auth System</p>
 
         </div>
-         <button className='border border-[#1B6747] bg-white rounded-md text-[#1B6747] px-2 py-px sm:px-2 text-xs !sm:text-sm cursor-pointer font-medium '>
+         <button className='border border-[#1B6747] bg-white rounded-md text-[#1B6747] px-2 py-px sm:px-2 text-[10px]! sm:text-[12px] cursor-pointer font-medium '>
           Completed
         </button>
 
@@ -34,10 +35,10 @@ const TaskByStatus = () => {
           <IconContext.Provider value={{ size: "20px" }}>
             <FcReading  />
           </IconContext.Provider>
-          <p>Reading 10 pages of a Self-Help Book</p>
+          <p className="text-xs sm:text-sm md:text-base">Read 10 pages of a Self-Help Book</p>
 
         </div>
-        <button className='border-2 border-[#f7e5d0f3] bg-[#fff7EC] rounded-md text-[#e3cc93] px-2 py-px sm:px-2 text-xs !sm:text-sm cursor-pointer font-medium  '>
+        <button className='border-2 border-[#f7e5d0f3] bg-[#fff7EC] rounded-md text-[#e3cc93] px-2 py-px sm:px-2 text-[10px]! sm:text-[12px] cursor-pointer font-medium  '>
           In Progress
         </button>
 
@@ -47,10 +48,10 @@ const TaskByStatus = () => {
           <IconContext.Provider value={{ size: "20px" }}>
             <FcVideoCall />
           </IconContext.Provider>
-          <p>React Dev Job Interview</p>
+          <p className="text-xs sm:text-sm md:text-base">React Dev Job Interview</p>
 
         </div>
-        <button className='border border-[#80797A] bg-[#FDEEEA] rounded-md text-[#B66172] px-2 py-px sm:px-2 text-xs !sm:text-sm cursor-pointer font-medium  '>
+        <button className='border border-[#80797A] bg-[#FDEEEA] rounded-md text-[#B66172] px-2 py-px sm:px-2 text-[10px]! sm:text-[12px] cursor-pointer font-medium  '>
           Pending
         </button>
 
@@ -60,10 +61,10 @@ const TaskByStatus = () => {
           <IconContext.Provider value={{ size: "20px" }}>
             <FcOvertime  /> 
           </IconContext.Provider>
-          <p>Working on Responsive Layout for Homepage</p>
+          <p className="text-xs sm:text-sm md:text-base">Working on Responsive Layout for Homepage</p>
 
         </div>
-        <button className='border-2 border-[#f7e5d0f3] bg-[#fff7EC] rounded-md text-[#e3cc93] px-2 py-px sm:px-2 text-xs !sm:text-sm cursor-pointer font-medium  '>
+        <button className='border-2 border-[#f7e5d0f3] bg-[#fff7EC] rounded-md text-[#e3cc93] px-2 py-px sm:px-2 text-[10px]! sm:text-[12px] cursor-pointer font-medium  '>
           In Progress
         </button>
 
@@ -72,12 +73,12 @@ const TaskByStatus = () => {
          <div className='flex items-center justify-between gap-2 py-4 '>
         <div className='flex items-center justify-between gap-2 '>
           <IconContext.Provider value={{ size: "20px" }}>
-            <FcBriefcase />
+            <FcBiotech />
           </IconContext.Provider>
-          <p>Grocery Shopping</p>
+          <p className="text-xs sm:text-sm">Fitness at the Gym</p>
 
         </div>
-         <button className='border border-[#1B6747] bg-white rounded-md text-[#1B6747] px-2 py-px sm:px-2 text-xs !sm:text-sm cursor-pointer font-medium '>
+         <button className='border border-[#1B6747] bg-white rounded-md text-[#1B6747] px-2 py-px sm:px-2 text-[10px]! !sm:text-[12px] !md:text-lg cursor-pointer font-medium '>
           Completed
         </button>
 
