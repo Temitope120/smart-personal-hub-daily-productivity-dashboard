@@ -8,7 +8,7 @@ interface ChildrenProps {
 const AppLayout = ({children}: ChildrenProps) => {
     return (
         <div className=" px-0 lg:px-6 py-8 min-h-screen rounded-4xl flex items-start gap-6">
-            <aside className="w-[240px] hidden lg:block fixed top-0 left-0">
+            <aside className="w-[240px] hidden lg:block fixed top-0 left-0 -z-10">
                 <Sidebar />
             </aside>
 

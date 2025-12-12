@@ -4,32 +4,61 @@ import { CiMail } from "react-icons/ci"
 import { IoMdNotificationsOutline } from "react-icons/io"
 import { GrUserManager } from "react-icons/gr"
 import { IconContext } from "react-icons"
+import { DiJqueryLogo } from "react-icons/di";
+
 
 const Topbar = () => {
   return (
-    <div className="bg-[#f7f7f7] flex justify-between gap-6 lg:ap-0 items-center p-4 lg:p-6 rounded-3xl">
+    <div className="bg-[#f7f7f7] fixed top-0 z-40 flex justify-between gap-6 lg:p-0 items-center p-3 lg:px-6 lg:rounded-3xl shadow-sm w-full">
 
-      <form className=" w-[80%] max-w-md">
-        <div className='bg-white flex justify-between items-center p-5 rounded-4xl'>
-          <div className="flex justify-between items-center">
-            <IconContext.Provider value={{ size: '30px' }}>
-              <BiSearch />
-            </IconContext.Provider>
-            <input type="text" placeholder="Search task" className="text-[#807c7c] text-sm md:text-base lg:text-lg" />
-          </div>
-          <GoFilter />
+      <div className='hidden lg:flex gap-2 items-center justify-start'>
+        <IconContext.Provider value={{ color: '#278055', size: '80px' }}>
+          <DiJqueryLogo />
 
+
+        </IconContext.Provider>
+        <p className='font-semibold text-base md:text-2xl'>SmartHub</p>
+      </div>
+      {/* mobile */}
+      <div className='flex lg:hidden gap-2 items-center justify-start'>
+        <IconContext.Provider value={{ color: '#278055', size: '30px' }}>
+          <DiJqueryLogo />
+
+
+        </IconContext.Provider>
+        <p className='font-semibold text-base md:text-2xl'>SmartHub</p>
+      </div>
+      {/* end  */}
+
+      <form className="hidden lg:flex w-[80%] max-w-md bg-white justify-between items-center p-5 rounded-4xl border-2">
+        <div className="flex justify-between items-center w-full">
+          <IconContext.Provider value={{ size: '30px' }}>
+            <BiSearch />
+          </IconContext.Provider>
+          <input type="text" placeholder="Search task" className="text-[#807c7c] text-sm md:text-base lg:text-lg outline-0 border-0 focus:outline-0 w-full" />
         </div>
+        <GoFilter />
+
       </form>
 
-      <div className="flex justify-between gap-3 items-center p-3">
-        <div className="bg-white rounded-full p-3 hidden xl:block">
+      {/* mobile  */}
+
+      <div className="block lg:hidden">
+        <IconContext.Provider value={{ size: '20px' }}>
+          <BiSearch />
+        </IconContext.Provider>
+      </div>
+
+      {/* end mobile */}
+
+      <div className="justify-between gap-3 items-center p-3 hidden xl:flex ">
+        <div className="bg-white rounded-full p-3">
           <IconContext.Provider value={{ size: '30px' }}>
             <CiMail />
           </IconContext.Provider>
         </div>
 
-        <div className="bg-white rounded-full p-3 hidden xl:block">
+        <div className="bg-white rounded-full p-3">
           <IconContext.Provider value={{ size: '30px' }}>
             <IoMdNotificationsOutline />
           </IconContext.Provider>
@@ -43,7 +72,7 @@ const Topbar = () => {
             </IconContext.Provider>
           </div>
 
-          <div className="hidden xl:block text-base md:text-lg font-medium leading-none">
+          <div className="text-base md:text-lg font-medium leading-none">
             <p >
               Mick Lawson
             </p>

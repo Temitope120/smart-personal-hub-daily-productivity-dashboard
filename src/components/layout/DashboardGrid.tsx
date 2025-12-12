@@ -67,7 +67,7 @@ const dashboardGrid = () => {
             <TaskByStatus />
           </div>
 
-          <div className='rounded-3xl py-4 px-6 bg-white w-full shadow-md'>
+          <div className='sm:col-span-2 xl:col-span-1 rounded-3xl py-4 px-6 bg-white w-full shadow-md'>
 
             <TaskCompletionProgress />
           </div>
