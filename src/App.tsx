@@ -12,8 +12,9 @@ function App() {
   return (
     <>
       <MantineProvider>
+        <Topbar />
         <AppLayout>
-          <Topbar />
+
           <Dashboard />
         </AppLayout>
       </MantineProvider>

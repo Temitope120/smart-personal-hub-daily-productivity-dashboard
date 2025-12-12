@@ -32,6 +32,8 @@ const TaskCompletionProgress = () => {
 
   return (
     <>
+      <p className="font-medium text-xl md:text-3xl mb-5">Task Progress</p>
+
       <div style={{ width: "100%", height: 300 }}>
         <ResponsiveContainer>
           <PieChart>

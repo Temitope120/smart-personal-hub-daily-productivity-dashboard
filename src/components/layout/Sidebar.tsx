@@ -6,20 +6,11 @@ import { SlNote } from "react-icons/sl";
 import { RiPassPendingFill } from "react-icons/ri";
 import { AiFillSetting } from "react-icons/ai";
 import { TbLogout2 } from "react-icons/tb";
-import { DiJqueryLogo } from "react-icons/di";
 
 const Sidebar = () => {
     return (
-        <div className="bg-[#F7F7F7] px-5 py-4 h-screen">
-            <div className='flex gap-2 items-center justify-start mb-12'>
-                <IconContext.Provider value={{ color: '#278055', size: '80px' }}>
-                    <DiJqueryLogo />
-
-
-                </IconContext.Provider>
-                <p className='font-semibold text-base md:text-2xl'>SmartHub</p>
-            </div>
-            <p className='mt-12 mb-6 font-medium'>Menu</p>
+        <div className="bg-[#F7F7F7] px-5 py-4 h-screen mt-12 pt-10">
+            <p className='mb-6 font-medium mt-12'>Menu</p>
             <ul>
                 <li className='flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
                     <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
