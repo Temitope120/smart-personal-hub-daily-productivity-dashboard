@@ -22,9 +22,9 @@ const Dashboard = ({delay= 0}) => {
                 {(styles) => (
                     <div
                         style={styles}
-                        className="py-5 bg-[#F7F7F7] rounded-3xl mt-4 p-3 md:px-4 md:py-6 xl:p-6">
+                        className="py-5 bg-[#F7F7F7] rounded-3xl mt-4 lg:mt-12 p-3 md:px-4 md:py-6 xl:p-6">
                         <div className="sm:flex justify-between gap-3 items-center">
-                            <div className='pb-3 pb-0'>
+                            <div className='pb-3'>
                                 <h2 className='lg:text-5xl font-sembold md:font-medium text-4xl'>
                                     Dashboard
                                 </h2>

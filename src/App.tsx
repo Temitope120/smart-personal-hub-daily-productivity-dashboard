@@ -1,24 +1,27 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import './App.css'
 import AppLayout from './components/layout/AppLayout'
-import Topbar from './components/layout/Topbar'
 import Dashboard from './pages/Dashboard'
 import '@mantine/core/styles.css'
-import { MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
+import Notes from "./pages/Notes";
+import Tasks from "./pages/Tasks";
 
 function App() {
 
   return (
     <>
-      <MantineProvider>
-        <Topbar />
-        <AppLayout>
+      <Routes>
+        <Route path="/" element={<AppLayout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="notes" element={<Notes />} />
+          <Route path="tasks" element={<Tasks />} />
+          {/* <Route path="logout" element={<Logout />} /> */}
 
-          <Dashboard />
-        </AppLayout>
-      </MantineProvider>
-
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
     </>
   )
 }
