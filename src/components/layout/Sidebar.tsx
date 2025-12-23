@@ -1,64 +1,104 @@
-import React from 'react'
-import { IconContext } from 'react-icons';
-import { BiSolidDashboard } from "react-icons/bi";
-import { FaTasks } from "react-icons/fa";
-import { SlNote } from "react-icons/sl";
-import { RiPassPendingFill } from "react-icons/ri";
-import { AiFillSetting } from "react-icons/ai";
-import { TbLogout2 } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
+import { sidebarData } from "../../data/sidebarData";
 
 const Sidebar = () => {
+    const mainNav = sidebarData.filter(item => !item.bottom);
+    const bottomNav = sidebarData.filter(item => item.bottom);
+    console.log(mainNav, bottomNav);
+
+
     return (
         <div className="bg-[#F7F7F7] px-5 py-4 h-screen mt-12 pt-10">
             <p className='mb-6 font-medium mt-12'>Menu</p>
             <ul>
-                <li className='flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
-                    <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
-                        <BiSolidDashboard />
 
-                    </IconContext.Provider>
-                    <a href="">Dashboard</a>
-                </li>
+                {/* {mainNav.map((item) => (
+                    <NavLink
+                        key={item.name}
+                        to={item.path}
+                        end={item.path === "/"}
+                        className={({ isActive }) =>
+                            `relative flex items-center gap-3 px-4 py-3 transition-all
+             before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+            before:h-5 before:w-1.5 before:rounded-sm cursor-pointer
+            ${isActive
+                                ? "text-[#247F55] font-medium before:bg-[#247F55]"
+                                : "text-gray-400 before:bg-transparent hover:text-gray-200"
+                            }`}
+                    >
 
-                <li className=' flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
-                    <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
-                        <FaTasks />
+                        {({ isActive }) => {
+                            const Icon = item.icon;
+                            return (
+                                <>
+                                    <Icon
+                                        className={`h-5 w-5 transition-colors ${isActive ? "text-[#247F55]" : "text-gray-400"
+                                            }`}
+                                    />
+                                    <span className="font-medium text-base md:text-lg cursor-pointer">
+                                        {item.name}
+                                    </span>
+                                </>
+                            );
+                        }}
 
-                    </IconContext.Provider>
-                    <a href="">Tasks</a>
-                </li>
-                <li className=' flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
-                    <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
-                        <SlNote />
+                    </NavLink>
+                ))} */}
 
-                    </IconContext.Provider>
-                    <a href="">Notes</a>
-                </li>
-                <li className=' pb-10 flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
-                    <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
-                        <RiPassPendingFill />
+                {mainNav.map((item) => {
+                    const Icon = item.icon;
+                    return (
+                        <NavLink
+                            key={item.name}
+                            to={item.path}
+                            end={item.path === "/"}
+                            className={({ isActive }) =>
+                                `relative flex items-center gap-3 px-4 py-3 transition-all
+        before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+        before:h-5 before:w-1.5 before:rounded-sm cursor-pointer
+        ${isActive ? "text-[#247F55] font-medium before:bg-[#247F55]" : "text-gray-400 before:bg-transparent hover:text-gray-200"}`
+                            }
+                        >
+                            <Icon className="h-5 w-5 transition-colors" />
+                            <span className="font-medium text-base md:text-lg">{item.name}</span>
+                        </NavLink>
+                    );
+                })}
 
-                    </IconContext.Provider>
-                    <a href="">Expenses</a>
-                </li>
 
                 <p className='mt-12 mb-8 font-medium'>GENERAL</p>
 
-                <li className=' flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
-                    <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
-                        <AiFillSetting />
+                {bottomNav.map((item) => (
+                    <NavLink
+                        key={item.name}
+                        to={item.path}
+                        className={({ isActive }) =>
+                            `relative flex items-center gap-3 px-4 py-3 transition-all
+             before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2
+            before:h-5 before:w-1.5 before:rounded-sm
+            ${isActive
+                                ? "text-[#247F55] font-medium before:bg-[#247F55] "
+                                : "text-gray-400 before:bg-transparent hover:text-gray-200 "
+                            }`}
+                    >
 
-                    </IconContext.Provider>
-                    <a href="">Settings</a>
-                </li>
+                        {({ isActive }) => {
+                            const Icon = item.icon;
+                            return (
+                                <>
+                                    <Icon
+                                        className={`h-5 w-5 transition-colors ${isActive ? "text-[#247F55]" : "text-gray-400"
+                                            }`}
+                                    />
+                                    <span className="font-medium text-base md:text-lg cursor-pointer">
+                                        {item.name}
+                                    </span>
+                                </>
+                            );
+                        }}
 
-                <li className=' flex items-center justify-items-start gap-2 text-base md:text-lg font-normal active:font-medium active:text-dark text-[#7cc0ad] cursor-pointer pb-4'>
-                    <IconContext.Provider value={{ color: '#278055', size: '20px' }}>
-                        <TbLogout2 />
-
-                    </IconContext.Provider>
-                    <a href="">Logout</a>
-                </li>
+                    </NavLink>
+                ))}
 
             </ul>
 
