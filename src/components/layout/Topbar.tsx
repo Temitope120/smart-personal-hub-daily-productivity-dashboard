@@ -9,6 +9,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import Sidebar from "./Sidebar"
 
 const Topbar = () => {
   const [menu, setMenu] = useState(false);
@@ -169,14 +170,14 @@ const Topbar = () => {
 
             {/* menu */}
             <motion.div
-              className="fixed top-12 left-0 z-50 bg-white p-4 rounded-bl-md rounded-br-md w-full"
+              className="fixed top-12 left-0 z-50 bg-[#F7F7F7] p-4 rounded-bl-md rounded-br-md w-full"
               initial={{ y: -10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: -10, opacity: 0 }}
             >
-              <div className="block lg:hidden w-full bg-white p-3">
-                <div className=" gap-3 px-3 pt-5 ">
-                  <form className="block sm:hidden max-w-md bg-[#f7f7f7] justify-between items-center py-2 px-3 text-sm rounded-4xl mb-2">
+              <div className="block lg:hidden w-full bg-[#F7F7F7] p-3">
+                <div className=" gap-3 px-3 pt-8 ">
+                  <form className="block sm:hidden max-w-md bg-white justify-between items-center py-2 px-3 text-sm rounded-4xl mb-2">
                     <div className="flex justify-between gap-2 items-center w-full">
                       <IconContext.Provider value={{ size: '15px' }}>
                         <BiSearch />
@@ -232,6 +233,7 @@ const Topbar = () => {
                   </div>
 
                 </div>
+                <Sidebar/>
               </div>
             </motion.div>
           </>
