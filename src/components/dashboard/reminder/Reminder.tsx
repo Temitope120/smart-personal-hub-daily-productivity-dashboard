@@ -1,6 +1,5 @@
 import { IconContext } from "react-icons";
 import { BsFillCameraVideoFill } from "react-icons/bs";
-
 const Reminder = () => {
   return (
     <div>
@@ -13,7 +12,7 @@ const Reminder = () => {
       </p>
 
       <button className='flex items-center justify-center gap-3 bg-[#1B6747] border-none rounded-4xl py-3 px-4 2xl:py-5 2xl:px-8 text-white text-lg! lg:text-xl! 2xl:text-2xl! cursor-pointer font-semibold mt-4'>
-        <IconContext.Provider value={{color:'white', size:'30px'}}>
+        <IconContext.Provider value={{ color: 'white', size: '30px' }}>
           <BsFillCameraVideoFill />
         </IconContext.Provider>
         Start Meeting

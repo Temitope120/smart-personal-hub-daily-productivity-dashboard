@@ -1,16 +1,15 @@
-import React from 'react'
 import DashboardGrid from '../components/layout/DashboardGrid'
 import { useEffect, useState } from "react";
 import { Transition } from "@mantine/core";
 
-const Dashboard = ({delay= 0}) => {
-     const [mounted, setMounted] = useState(false);
-    
-        useEffect(() => {
-            const timer = setTimeout(() => setMounted(true), delay)
-            return () => clearTimeout(timer);
-        }, [delay])
-    
+const Dashboard = ({ delay = 0 }) => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => setMounted(true), delay)
+        return () => clearTimeout(timer);
+    }, [delay])
+
     return (
         <>
             <Transition
