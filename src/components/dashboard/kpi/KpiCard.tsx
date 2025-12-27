@@ -3,6 +3,8 @@ import { IconContext } from "react-icons";
 import { GoArrowUpRight } from "react-icons/go";
 import { IoMdArrowDropup } from "react-icons/io";
 import { Transition } from "@mantine/core";
+import { motion } from "framer-motion";
+
 
 
 interface KpiProps {
@@ -29,18 +31,26 @@ const KpiCard = ({ topText, totalCount, percentageIncrease, delay = 0 }: KpiProp
             timingFunction="ease-in-out"
         >
             {(styles) => (
-                <div 
-                style={styles}
-                className="bg-[linear-gradient(to_left_bottom,_#12432c,_#195032,_#225d37,_#2d6a3b,_#39783f)] rounded-3xl py-4 px-4 xl:px-6 shadow-md">
+                <div
+                    style={styles}
+                    className="bg-[linear-gradient(to_left_bottom,_#12432c,_#195032,_#225d37,_#2d6a3b,_#39783f)] rounded-3xl py-4 px-4 xl:px-6 shadow-md">
                     <div className="pb-3 flex items-center justify-between">
                         <p className="text-white font-medium text-lg md:text-2xl">
                             {topText}
                         </p>
+                        <motion.button
+                            whileHover={{
+                                scale: 1.1,
+                                transition: { duration: 0.1 }
+                            }}
+                            transition={{ duration: 0.5 }}
+                        >
                         <div className="rounded-full p-3 bg-white">
                             <IconContext.Provider value={{ size: '20px' }}>
                                 <GoArrowUpRight />
                             </IconContext.Provider>
                         </div>
+                        </motion.button>
 
                     </div>
 
