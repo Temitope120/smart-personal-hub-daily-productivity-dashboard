@@ -8,6 +8,7 @@ import { DiJqueryLogo } from "react-icons/di";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const [menu, setMenu] = useState(false);
@@ -20,24 +21,34 @@ const Topbar = () => {
   return (
     <>
       <div className="bg-[#f7f7f7] fixed top-0 z-40 flex justify-between lg:gap-3 xl:gap-6 lg:p-0 items-center p-3 lg:px-6 shadow-sm w-full">
-
-        <div className='hidden lg:flex gap-2 items-center justify-start'>
-          <IconContext.Provider value={{ color: '#278055', size: '60px' }}>
-            <DiJqueryLogo />
-
-
-          </IconContext.Provider>
-          <p className='font-semibold lg:text-xl xl:text-2xl'>SmartHub</p>
+        <div className="hidden lg:flex">
+          <motion.div whileHover={{ scale: 1.05 }}>
+            <div className='hidden lg:flex gap-2 items-center justify-start'>
+              <Link to="/">
+                <IconContext.Provider value={{ color: '#278055', size: '60px' }}>
+                  <DiJqueryLogo />
+                </IconContext.Provider>
+              </Link>
+              <p className='font-semibold lg:text-xl xl:text-2xl'>SmartHub</p>
+            </div>
+          </motion.div>
         </div>
+
+
+
+
         {/* mobile */}
         <div className='flex lg:hidden gap-2 items-center justify-start'>
-          <IconContext.Provider value={{ color: '#278055', size: '25px' }}>
-            <DiJqueryLogo />
+          <Link to="/">
+            <IconContext.Provider value={{ color: '#278055', size: '25px' }}>
+              <DiJqueryLogo />
+            </IconContext.Provider>
+          </Link>
 
-
-          </IconContext.Provider>
           <p className='font-semibold text-base'>SmartHub</p>
         </div>
+
+
 
         <form className="hidden sm:block lg:hidden max-w-md bg-white justify-between items-center py-2 px-3 text-sm rounded-4xl">
           <div className="flex justify-between gap-2 items-center w-full">
