@@ -34,7 +34,7 @@ export const sidebarData = [
 
     {
         name: "Settings",
-        path: "settings/",
+        path: "/settings",
         icon: AiFillSetting,
         activeIcon: AiFillSetting,
         bottom:true,

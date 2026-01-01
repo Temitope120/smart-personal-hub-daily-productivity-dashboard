@@ -15,10 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<AppLayout />}>
           <Route index element={<Dashboard />} />
-          <Route path="/notes" element={<Notes />} />
-          <Route path="/tasks" element={<Tasks />} />
-          {/* <Route path="logout" element={<Logout />} /> */}
-
+          <Route path="notes" element={<Notes />} />
+          <Route path="tasks" element={<Tasks />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
