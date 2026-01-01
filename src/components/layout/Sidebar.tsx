@@ -6,13 +6,14 @@ const Sidebar = () => {
     const bottomNav = sidebarData.filter(item => item.bottom);
 
     return (
-        <div className="bg-[#F7F7F7] px-5 py-4 h-screen mt-12 pt-10">
-            <p className='mb-6 font-medium mt-12'>Menu</p>
+        <div className="bg-[#F7F7F7] px-5 py-4 h-screen pt-24">
+            <p className='mb-6 font-medium pt-12'>Menu</p>
             <ul>
 
                 {mainNav.map((item) => {
                     const Icon = item.icon;
                     return (
+                        <li key={item.name}>
                         <NavLink
                             key={item.name}
                             to={item.path}
@@ -27,6 +28,7 @@ const Sidebar = () => {
                             <Icon className="h-5 w-5 transition-colors" />
                             <span className="font-medium text-base md:text-lg">{item.name}</span>
                         </NavLink>
+                        </li>
                     );
                 })}
 
@@ -34,6 +36,7 @@ const Sidebar = () => {
                 <p className='mt-12 mb-8 font-medium'>GENERAL</p>
 
                 {bottomNav.map((item) => (
+                    <li key={item.name}>
                     <NavLink
                         key={item.name}
                         to={item.path}
@@ -63,6 +66,7 @@ const Sidebar = () => {
                         }}
 
                     </NavLink>
+                    </li>
                 ))}
 
             </ul>
