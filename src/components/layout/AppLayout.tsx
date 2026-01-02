@@ -12,7 +12,7 @@ const AppLayout = () => {
                 </aside>
 
 
-                <main className='w-full lg:ml-[240px] p-4 overflow-y-auto bg-white h-screen rounded-2xl md:rounded-3xl xl:mt-[50px]'>
+                <main className='w-full lg:ml-[220px] p-4 overflow-y-auto bg-white h-screen rounded-2xl md:rounded-3xl xl:mt-[50px]'>
                     <Outlet />
                 </main>
 

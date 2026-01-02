@@ -16,6 +16,7 @@
     "@mantine/hooks": "^8.3.9",
     "@mantine/notifications": "^8.3.9",
     "@mantine/nprogress": "^8.3.9",
+    "@tabler/icons-react": "^3.36.0",
     "@tailwindcss/vite": "^4.1.17",
     "embla-carousel": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
