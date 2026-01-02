@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import '@mantine/carousel/styles.css';
 import Notes from "./pages/Notes";
 import Tasks from "./pages/Tasks";
+import Settings from "./pages/Settings";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="notes" element={<Notes />} />
           <Route path="tasks" element={<Tasks />} />
+          <Route path="settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
