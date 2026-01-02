@@ -2,7 +2,7 @@ import TaskTabView from "../components/TaskTabView"
 
 const Tasks = () => {
   return (
-    <div className="">
+    <>
       <div className="bg-white flex items-center justify-between pt-8 md:px-4 md:py-6 xl:p-6">
         <h2 className='lg:text-5xl font-sembold md:font-medium text-4xl'>
           Tasks
@@ -12,8 +12,7 @@ const Tasks = () => {
         </button>
       </div>
       <TaskTabView />
-    </div>
-
+    </>
   )
 }
 
