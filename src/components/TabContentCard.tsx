@@ -1,7 +1,7 @@
 
 const TabContentCard = () => {
     return (
-        <div className="bg-white rounded-2xl p-4 w-60 space-y-4 mt-4 mb-6 shadow-md">
+        <div className="bg-white rounded-2xl p-4 w-full sm:w-60 space-y-4 mt-4 mb-6 shadow-md">
             <div className="flex items-center justify-between gap-4">
                 <div className="flex items-center gap-4">
                     <div className=" h-20 w-20 overflow-hidden">

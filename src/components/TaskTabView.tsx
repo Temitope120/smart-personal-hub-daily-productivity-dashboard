@@ -7,7 +7,7 @@ import KpiCard from "./dashboard/kpi/KpiCard";
 const TaskTabView = () => {
     return (
         <div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-12 mb-10">
                 <div>
                     <p className="lg:text-3xl font-sembold md:font-medium text-2xl pb-4">Milestones</p>
                     <div className=" rounded-2xl py-4 px-4 xl:px-6 shadow-md ">
@@ -22,7 +22,7 @@ const TaskTabView = () => {
                         </button>
                     </div>
                 </div>
-                <div className="lg:col-span-2">
+                <div className="lg:col-span-2 pb-6">
                     <p className="lg:text-3xl font-sembold md:font-medium text-2xl pb-4">Task Summary</p>
                     <div className=" rounded-2xl py-4 px-4 xl:px-6 shadow-md ">
                         <div className="mb-3">
@@ -34,7 +34,7 @@ const TaskTabView = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-8 '>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-8 '>
                 <div>
                     <div className='flex items-center justify-between gap-6'>
                         <p className="font-semibold text-lg lg:text-xl">To Do &nbsp;
@@ -70,7 +70,7 @@ const TaskTabView = () => {
                     <div className='flex items-center justify-between gap-6'>
                         <p className="font-semibold text-lg lg:text-xl text-[#D35992]">
                             In Review  &nbsp;
-                            <span className="text-[#72787D]">(02) </span>
+                            <span className="text-[#72787D]">(03) </span>
                         </p>
                         <div className='flex items-center gap-3 cursor-pointer'>
                             < AiOutlinePlus size={20} />
@@ -87,7 +87,7 @@ const TaskTabView = () => {
                     <div className='flex items-center justify-between gap-6'>
                         <p className="font-semibold text-lg lg:text-xl text-[#4DCA7B]">
                             Done &nbsp;
-                            <span className="text-[#72787D]">(02) </span>
+                            <span className="text-[#72787D]">(03) </span>
                         </p>
                         <div className='flex items-center gap-3 cursor-pointer'>
                             < AiOutlinePlus size={20} />
