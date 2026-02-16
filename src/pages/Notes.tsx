@@ -1,9 +1,11 @@
+import * as React from "react";
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import TablePagination from '@mui/material/TablePagination'
 import Paper from '@mui/material/Paper';
 import EmptyState from '../assets/empty-table.svg'
 
@@ -17,14 +19,32 @@ function createData(
 }
 
 const rows = [
-  createData(1, 'standup Meeting Project Update to discuss the way forward on Sprint 2', 159, 6.0, ),
+  createData(1, 'standup Meeting Project Update to discuss the way forward on Sprint 2', 159, 6.0,),
   createData(2, 'Meeting with Client at 2pm', 237, 9.0,),
-  createData(3, 'Meeting with Client at 2pm', 262, 16.0, ),
+  createData(3, 'Meeting with Client at 2pm', 262, 16.0,),
   createData(4, 'Meeting with Client at 2pm', 305, 3.7,),
 
 ];
 
 const Notes = () => {
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
+
+  const handleChangePage = (
+    event: React.MouseEvent<HTMLButtonElement> | null,
+    newPage: number,
+  ) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+
+
   return (
     <>
 
@@ -48,24 +68,38 @@ const Notes = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows ? rows.map((row) => (
-              <TableRow
-                key={row.title}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell align="left">{row.index}</TableCell>
-                <TableCell component="th" scope="row">
-                  {row.title}
-                </TableCell>
-                <TableCell align="right">{row.content}</TableCell>
-                <TableCell align="right">{row.action}</TableCell>
-              </TableRow>
-            )) : 
+            {rows && rows
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) ? rows.map((row) => (
+                <TableRow
+                  key={row.title}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell align="left">{row.index}</TableCell>
+                  <TableCell component="th" scope="row">
+                    {row.title}
+                  </TableCell>
+                  <TableCell align="right">{row.content}</TableCell>
+                  <TableCell align="right">{row.action}</TableCell>
+                </TableRow>
+              )) :
               <img src={EmptyState} alt="empty-table-icon" />
             }
           </TableBody>
         </Table>
+
+        <TablePagination
+          component="div"
+          count={rows.length}
+          page={page}
+          onPageChange={handleChangePage}
+          rowsPerPage={rowsPerPage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          rowsPerPageOptions={[5, 10, 25]}
+        />
       </TableContainer>
+
+      {/* pagination */}
+
     </>
   )
 }
