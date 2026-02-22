@@ -1,10 +1,19 @@
+import { useDroppable } from '@dnd-kit/react';
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
-import TabContentCard from './TabContentCard';
+// import TabContentCard from './TabContentCard';
 import MilestoneGif from '../assets/milestone-gif.gif'
 import KpiCard from "./dashboard/kpi/KpiCard";
 
-const TaskTabView = () => {
+interface propType {
+    id: string,
+}
+
+const TaskTabView = ({ id, children }: React.PropsWithChildren<propType>) => {
+    const { ref } = useDroppable({
+        id,
+    });
+
     return (
         <div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3 gap-12 mb-10">
@@ -18,7 +27,7 @@ const TaskTabView = () => {
                         <p className="text-base lg:text-lg inline-block pb-2 text-gray-600">You can create milestones.</p>
 
                         <button className='bg-[#F5F5F5] text-[#1B6747] flex gap-2 border-none rounded-2xl py-3 px-4 xl:px-6 text-sm lg:text-base xl:text-xl cursor-pointer font-bold! shadow-sm'>
-                           < AiOutlinePlus size={20} /> Create Milestone
+                            < AiOutlinePlus size={20} /> Create Milestone
                         </button>
                     </div>
                 </div>
@@ -34,7 +43,7 @@ const TaskTabView = () => {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-8 '>
+            <div ref={ref} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-8 lg:pb-12'>
                 <div>
                     <div className='flex items-center justify-between gap-6'>
                         <p className="font-semibold text-lg lg:text-xl">To Do &nbsp;
@@ -46,9 +55,8 @@ const TaskTabView = () => {
                         </div>
                     </div>
 
-                    <TabContentCard />
-                    <TabContentCard />
-                    <TabContentCard />
+                   
+                    {children}
 
                 </div>
 
@@ -61,8 +69,8 @@ const TaskTabView = () => {
                             < BsThreeDots size={20} />
                         </div>
                     </div>
-                    <TabContentCard />
-                    <TabContentCard />
+                   
+                    {/* {children} */}
 
                 </div>
 
@@ -77,10 +85,8 @@ const TaskTabView = () => {
                             < BsThreeDots size={20} />
                         </div>
                     </div>
-
-                    <TabContentCard />
-                    <TabContentCard />
-                    <TabContentCard />
+                   
+                    {/* {children} */}
 
                 </div>
                 <div>
@@ -94,10 +100,8 @@ const TaskTabView = () => {
                             < BsThreeDots size={20} />
                         </div>
                     </div>
-
-                    <TabContentCard />
-                    <TabContentCard />
-                    <TabContentCard />
+                    {/* {children} */}
+                  
                 </div>
             </div>
 
