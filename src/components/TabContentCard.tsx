@@ -1,13 +1,13 @@
-import { useDraggable } from '@dnd-kit/react';
+// import { useDraggable } from '@dnd-kit/react';
 
 const TabContentCard = () => {
-    const { ref } = useDraggable({
-        id: 'draggable',
-    });
+    // const { ref } = useDraggable({
+    //     id: 'draggable',
+    // });
     return (
         <>
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10'>
-                <div ref={ref} className="bg-white rounded-2xl p-4 w-full sm:w-60 space-y-4 mt-4 mb-12 shadow-md">
+                {/* <div ref={ref} className="bg-white rounded-2xl p-4 w-full sm:w-60 space-y-4 mt-4 mb-12 shadow-md">
                     <div className="flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4">
                             <div className=" h-20 w-20 overflow-hidden">
@@ -31,7 +31,7 @@ const TabContentCard = () => {
                     <div className="flex items-center justify-between">
 
                     </div>
-                </div>
+                </div> */}
 
             </div>
 

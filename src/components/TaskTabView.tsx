@@ -1,4 +1,4 @@
-import { useDroppable } from '@dnd-kit/react';
+// import { useDroppable } from '@dnd-kit/react';
 import { AiOutlinePlus } from "react-icons/ai";
 import { BsThreeDots } from "react-icons/bs";
 // import TabContentCard from './TabContentCard';
@@ -8,11 +8,12 @@ import KpiCard from "./dashboard/kpi/KpiCard";
 interface propType {
     id: string,
 }
+// unused props for now: { id, children }: React.PropsWithChildren<propType>
 
-const TaskTabView = ({ id, children }: React.PropsWithChildren<propType>) => {
-    const { ref } = useDroppable({
-        id,
-    });
+const TaskTabView = () => {
+    // const { ref } = useDroppable({
+    //     id,
+    // });
 
     return (
         <div>
@@ -43,7 +44,7 @@ const TaskTabView = ({ id, children }: React.PropsWithChildren<propType>) => {
                 </div>
             </div>
 
-            <div ref={ref} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-8 lg:pb-12'>
+            {/* <div ref={ref} className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-8 lg:pb-12'>
                 <div>
                     <div className='flex items-center justify-between gap-6'>
                         <p className="font-semibold text-lg lg:text-xl">To Do &nbsp;
@@ -69,8 +70,7 @@ const TaskTabView = ({ id, children }: React.PropsWithChildren<propType>) => {
                             < BsThreeDots size={20} />
                         </div>
                     </div>
-                   
-                    {/* {children} */}
+                
 
                 </div>
 
@@ -86,7 +86,6 @@ const TaskTabView = ({ id, children }: React.PropsWithChildren<propType>) => {
                         </div>
                     </div>
                    
-                    {/* {children} */}
 
                 </div>
                 <div>
@@ -100,10 +99,9 @@ const TaskTabView = ({ id, children }: React.PropsWithChildren<propType>) => {
                             < BsThreeDots size={20} />
                         </div>
                     </div>
-                    {/* {children} */}
                   
                 </div>
-            </div>
+            </div> */}
 
 
 
