@@ -23,6 +23,9 @@ const rows = [
   createData(2, 'Meeting with Client at 2pm', 237, 9.0,),
   createData(3, 'Meeting with Client at 2pm', 262, 16.0,),
   createData(4, 'Meeting with Client at 2pm', 305, 3.7,),
+   createData(5, 'Meeting with Client at 2pm', 237, 9.0,),
+  createData(6, 'Meeting with Client at 2pm', 262, 16.0,),
+  createData(7, 'Meeting with Client at 2pm', 305, 3.7,),
 
 ];
 
@@ -31,7 +34,7 @@ const Notes = () => {
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (
-    event: React.MouseEvent<HTMLButtonElement> | null,
+    _event: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number,
   ) => {
     setPage(newPage);
