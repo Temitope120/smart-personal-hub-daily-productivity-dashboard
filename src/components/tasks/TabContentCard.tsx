@@ -1,4 +1,4 @@
-import type { Task, Status } from '../../types/tasks';
+import type { Task } from '../../types/tasks';
 import type { Milestone } from '../../types/milestone';
 
 type TaskCardProps = {
