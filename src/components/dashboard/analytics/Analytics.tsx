@@ -1,4 +1,4 @@
-import { data } from '../../../data/habitsData';
+import { data } from '../../../data/habits';
 import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 

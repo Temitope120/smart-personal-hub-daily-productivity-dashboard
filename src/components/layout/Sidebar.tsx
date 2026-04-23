@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { sidebarData } from "../../data/sidebarData";
+import { sidebarData } from "../../data/sidebar";
 
 const Sidebar = () => {
     const mainNav = sidebarData.filter(item => !item.bottom);

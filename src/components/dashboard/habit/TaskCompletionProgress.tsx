@@ -16,7 +16,7 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { taskData } from "../../../data/habitsData";
+import { taskData } from "../../../data/habits";
 import { useState } from "react";
  
 
