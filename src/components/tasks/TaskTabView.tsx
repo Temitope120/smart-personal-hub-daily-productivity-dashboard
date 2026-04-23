@@ -1,7 +1,7 @@
 import MilestoneGif from '../../assets/milestone-gif.gif'
 import type { Milestone } from '../../types/milestone';
 import KpiCard from "../dashboard/kpi/KpiCard";
-import MilestoneButton from '../tasks/milestoneButton';
+import MilestoneButton from './milestoneButton';
 
 type props = {
     milestones: Milestone[],
